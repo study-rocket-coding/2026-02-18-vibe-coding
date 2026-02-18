@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React vs Vue | 前端框架深度比較</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        react: '#61DAFB',
+                        vue: '#42B883',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .transition-theme { transition: background-color 0.3s, color 0.3s, border-color 0.3s; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-theme min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-bold bg-gradient-to-r from-react to-vue bg-clip-text text-transparent">Framework Duel</span>
+            </div>
+            <button id="theme-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:ring-2 ring-slate-300 dark:ring-slate-600 transition-all">
+                <!-- Sun Icon -->
+                <svg id="sun-icon" class="w-6 h-6 hidden dark:block text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path></svg>
+                <!-- Moon Icon -->
+                <svg id="moon-icon" class="w-6 h-6 block dark:hidden text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="py-16 px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
+            React <span class="text-slate-400 font-light mx-2">vs</span> Vue
+        </h1>
+        <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            前端兩大巨頭的正面對決。從語法特性到效能表現，幫助您選擇最適合專案的開發工具。
+        </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 pb-20">
+        <!-- Comparison Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- React Card -->
+            <section class="p-8 rounded-3xl bg-white dark:bg-slate-800 shadow-xl border border-slate-100 dark:border-slate-700 hover:scale-[1.02] transition-transform">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-react/10">
+                        <svg class="w-10 h-10 text-react" viewBox="-11.5 -10.23174 23 20.46348" fill="currentColor">
+                            <circle cx="0" cy="0" r="2.05"/>
+                            <g stroke="currentColor" stroke-width="1" fill="none">
+                                <ellipse rx="11" ry="4.2"/>
+                                <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+                                <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold">React</h2>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-react mb-2">核心特性</h3>
+                        <p class="text-lg text-slate-600 dark:text-slate-400">JSX 語法、虛擬 DOM、單向數據流。強大的組合性 (Composition)。</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-react mb-2">學習曲線</h3>
+                        <div class="w-full bg-slate-200 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
+                            <div class="bg-react h-full w-[75%]"></div>
+                        </div>
+                        <p class="text-base mt-2 text-slate-500">中等偏高 (需熟悉 JavaScript 與函數式編程)</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-react mb-2">生態系</h3>
+                        <ul class="list-disc list-inside text-lg text-slate-600 dark:text-slate-400 space-y-2">
+                            <li>Next.js (SSG/SSR)</li>
+                            <li>React Router</li>
+                            <li>Zustand / Redux</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vue Card -->
+            <section class="p-8 rounded-3xl bg-white dark:bg-slate-800 shadow-xl border border-slate-100 dark:border-slate-700 hover:scale-[1.02] transition-transform">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-vue/10">
+                        <svg class="w-10 h-10 text-vue" viewBox="0 0 256 221" fill="currentColor">
+                            <path d="M204.8,0H256L128,220.8L0,0h51.2L128,132.48L204.8,0z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold">Vue</h2>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-vue mb-2">核心特性</h3>
+                        <p class="text-lg text-slate-600 dark:text-slate-400">模板語法 (Templates)、雙向數據綁定、響應式系統 (Proxy-based)。</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-vue mb-2">學習曲線</h3>
+                        <div class="w-full bg-slate-200 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
+                            <div class="bg-vue h-full w-[45%]"></div>
+                        </div>
+                        <p class="text-base mt-2 text-slate-500">友善 (漸進式框架，易於上手)</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-vue mb-2">生態系</h3>
+                        <ul class="list-disc list-inside text-lg text-slate-600 dark:text-slate-400 space-y-2">
+                            <li>Nuxt.js (SSG/SSR)</li>
+                            <li>Vue Router</li>
+                            <li>Pinia / Vuex</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Detailed Metrics Table -->
+        <section class="mt-16 overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+            <div class="px-6 py-4 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700">
+                <h3 class="font-bold text-2xl">效能與技術面向</h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="text-slate-500 dark:text-slate-400 text-lg border-b border-slate-100 dark:border-slate-700">
+                            <th class="p-6 font-semibold">比較項目</th>
+                            <th class="p-6 font-semibold">React</th>
+                            <th class="p-6 font-semibold">Vue</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-700 text-lg">
+                        <tr>
+                            <td class="p-6 font-medium">渲染機制</td>
+                            <td class="p-6">Virtual DOM</td>
+                            <td class="p-6">Optimized VDOM (Compiler-informed)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-medium">檔案大小 (Gzipped)</td>
+                            <td class="p-6">~42 KB (React + DOM)</td>
+                            <td class="p-6">~33 KB (Core)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-medium">響應式原理</td>
+                            <td class="p-6">Explicit (useState/Hooks)</td>
+                            <td class="p-6">Automatic (Proxy-based refs)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to dark
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                html.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+    </script>
+</body>
+</html>
