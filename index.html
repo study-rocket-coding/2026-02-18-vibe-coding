@@ -160,13 +160,80 @@
                 </table>
             </div>
         </section>
+
+        <!-- Beginner Encyclopedia (Accordion) -->
+        <section class="mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">新手百科：深入了解關鍵概念</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                
+                <!-- Item 1: JSX vs Templates -->
+                <div class="accordion-item border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden bg-white dark:bg-slate-800">
+                    <button class="accordion-header w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                        <span class="text-xl font-bold">1. JSX 與 模板 (Templates) 有什麼不同？</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="p-6 text-lg text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-700 space-y-4">
+                            <p><strong class="text-react">React (JSX)：</strong> 像是「在 JavaScript 裡面寫 HTML」。你可以發揮 JavaScript 的所有威力來控制畫面，雖然一開始看起來有點奇怪，但對於邏輯複雜的組件非常強大。</p>
+                            <p><strong class="text-vue">Vue (Templates)：</strong> 像是「加強版的 HTML」。它保持了傳統網頁開發的習慣，讓 HTML 負責結構、CSS 負責樣式、JS 負責邏輯，對剛從傳統網頁轉過來的人非常友善。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Virtual DOM -->
+                <div class="accordion-item border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden bg-white dark:bg-slate-800">
+                    <button class="accordion-header w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                        <span class="text-xl font-bold">2. 什麼是「虛擬 DOM」？為什麼我們需要它？</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="p-6 text-lg text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-700">
+                            <p>想像你在裝修房子。傳統做法是每改一個地方就重新蓋整棟房（效能很差）。<br><br>
+                               <strong>虛擬 DOM</strong> 就像是施工前的「草稿圖」。當數據變動時，框架會先在草稿上算出最有效率的改法，最後才去動真正的房子（真實網頁）。這就是為什麼這些框架能讓網頁跑得又快又順的原因。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Reactivity -->
+                <div class="accordion-item border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden bg-white dark:bg-slate-800">
+                    <button class="accordion-header w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                        <span class="text-xl font-bold">3. 什麼是「響應式原理」？為什麼數據變了畫面就會動？</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="p-6 text-lg text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-700 space-y-4">
+                            <p>想像你在用 <strong>Excel 表格</strong>。當你改動一個格子裡的數字，旁邊計算「總和」的格子會「自動」更新。這種數據變動、畫面跟著連動的機制，就叫響應式。</p>
+                            <p><strong class="text-react">React：</strong> 像是「手動報備制」。你必須明確透過函式（如 <code>useState</code>）告訴 React：「嘿！我改數據了」，它才會幫你重新整理畫面。</p>
+                            <p><strong class="text-vue">Vue：</strong> 像是「全自動監控制」。Vue 會在背後悄悄觀察你的數據，只要你一改動，它立刻就會知道並自動更新畫面，寫起來非常直覺。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Ecosystem -->
+                <div class="accordion-item border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden bg-white dark:bg-slate-800">
+                    <button class="accordion-header w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                        <span class="text-xl font-bold">4. 我該如何選擇第一個學習的框架？</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="p-6 text-lg text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-700">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>如果你喜歡<strong>「JavaScript 優先」</strong>、追求靈活性，並且想找最多職缺，選 <strong>React</strong>。</li>
+                                <li>如果你喜歡<strong>「清晰的結構」</strong>、追求快速上手，並且希望框架幫你打理好大部分的事情，選 <strong>Vue</strong>。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <script>
         const themeToggle = document.getElementById('theme-toggle');
         const html = document.documentElement;
 
-        // Check for saved theme preference or default to dark
+        // Theme logic
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             html.classList.add('dark');
         } else {
@@ -181,6 +248,29 @@
                 html.classList.add('dark');
                 localStorage.theme = 'dark';
             }
+        });
+
+        // Accordion logic
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('svg');
+                
+                // Toggle current item
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    // Close other items (optional, but cleaner)
+                    document.querySelectorAll('.accordion-content').forEach(item => {
+                        item.style.maxHeight = null;
+                        item.previousElementSibling.querySelector('svg').style.transform = 'rotate(0deg)';
+                    });
+                    
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
         });
     </script>
 </body>
